@@ -1,24 +1,725 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9e3-uW-sNi">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Yw6-ls-wzC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="9e3-uW-sNi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CeR-kg-D1g">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="puR-dF-Jlq" kind="relationship" relationship="viewControllers" id="Od7-yD-68c"/>
+                        <segue destination="pCS-bw-Jj7" kind="relationship" relationship="viewControllers" id="rEN-E2-V0r"/>
+                        <segue destination="y95-OU-lPD" kind="relationship" relationship="viewControllers" id="fEE-ph-qu2"/>
+                        <segue destination="JX9-To-48V" kind="relationship" relationship="viewControllers" id="zaO-7a-4Yg"/>
+                        <segue destination="3bT-wO-DdU" kind="relationship" relationship="viewControllers" id="JjN-Ij-FKb"/>
+                        <segue destination="dNo-bD-hYj" kind="relationship" relationship="viewControllers" id="dBp-OU-lq5"/>
+                        <segue destination="g6D-QY-rcr" kind="relationship" relationship="viewControllers" id="vqy-am-y1t"/>
+                        <segue destination="Ijp-6D-u6U" kind="relationship" relationship="viewControllers" id="zJ2-sJ-KGr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mei-sq-ddQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2294" y="-564"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="2Wc-6q-EXf">
+            <objects>
+                <navigationController id="puR-dF-Jlq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="home" image="house" catalog="system" id="32Q-Iy-txH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uuN-Q8-OWB">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="A3l-fL-4Vd" kind="relationship" relationship="rootViewController" id="whM-S5-tYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOe-ks-AW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="275"/>
+        </scene>
+        <!--Meine Ausgaben-->
+        <scene sceneID="Om9-VD-Ubf">
+            <objects>
+                <viewController id="A3l-fL-4Vd" customClass="ViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hiX-uu-M1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="y24-me-Ekf" detailTextLabel="LqN-D3-SHe" rowHeight="49" style="IBUITableViewCellStyleSubtitle" id="hro-Rt-8RV">
+                                <rect key="frame" x="0.0" y="50" width="390" height="49"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hro-Rt-8RV" id="aRq-4V-37C">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y24-me-Ekf">
+                                            <rect key="frame" x="20" y="9" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LqN-D3-SHe">
+                                            <rect key="frame" x="19.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meine Ausgaben" id="9uA-uD-Hcp"/>
+                    <connections>
+                        <outlet property="tableView" destination="hiX-uu-M1Y" id="GBK-XG-8WK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wem-7c-TRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412.30769230769232" y="969.66824644549763"/>
+        </scene>
+        <!--Mo-->
+        <scene sceneID="hWj-sL-KX7">
+            <objects>
+                <navigationController id="pCS-bw-Jj7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mo" image="m.square" catalog="system" id="jui-I1-ImW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bL-e9-18f">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j3r-9b-TuU" kind="relationship" relationship="rootViewController" id="KCK-VS-vTU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4y-Bx-5kC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="274"/>
+        </scene>
+        <!--Di-->
+        <scene sceneID="gyl-vj-bxg">
+            <objects>
+                <navigationController id="y95-OU-lPD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Di" image="d.square" catalog="system" id="Ylv-qy-GUt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUQ-l5-f3N">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EGN-4v-MGn" kind="relationship" relationship="rootViewController" id="hRL-GV-vDT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZl-s6-6dx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="274"/>
+        </scene>
+        <!--Montag-->
+        <scene sceneID="0wI-w6-1b7">
+            <objects>
+                <viewController storyboardIdentifier="WeekAddViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j3r-9b-TuU" customClass="WeekAddViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kp8-BW-AE5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-8Z-9lT">
+                                <rect key="frame" x="20" y="91" width="350" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N95-WA-2eH">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9f-Tv-hTd">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="350" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q25-oK-VBz">
+                                        <rect key="frame" x="0.0" y="62" width="350" height="36.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-YB-ziA">
+                                        <rect key="frame" x="0.0" y="98.333333333333343" width="350" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2u1-cl-xU1">
+                                        <rect key="frame" x="0.0" y="123.66666666666666" width="350" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SL-JN-eXC">
+                                        <rect key="frame" x="0.0" y="173.66666666666669" width="350" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="Vtt-yZ-VJj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NP2-5G-9bW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NP2-5G-9bW" firstAttribute="bottom" secondItem="EkM-8Z-9lT" secondAttribute="bottom" constant="462" id="08i-2G-zAl"/>
+                            <constraint firstItem="EkM-8Z-9lT" firstAttribute="top" secondItem="NP2-5G-9bW" secondAttribute="top" id="JP7-Cs-GI8"/>
+                            <constraint firstItem="NP2-5G-9bW" firstAttribute="trailing" secondItem="EkM-8Z-9lT" secondAttribute="trailing" constant="20" id="WhB-G7-z6f"/>
+                            <constraint firstItem="EkM-8Z-9lT" firstAttribute="leading" secondItem="NP2-5G-9bW" secondAttribute="leading" constant="20" id="rNl-d4-Cze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Montag" id="drB-N3-u6r"/>
+                    <connections>
+                        <outlet property="datePicker" destination="2u1-cl-xU1" id="pWc-He-1om"/>
+                        <outlet property="taskName" destination="q25-oK-VBz" id="XAB-uI-atu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agy-kX-W4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396.92307692307691" y="969.66824644549763"/>
+        </scene>
+        <!--Dienstag-->
+        <scene sceneID="uzz-mD-wcq">
+            <objects>
+                <viewController storyboardIdentifier="DiViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGN-4v-MGn" customClass="DiViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AqC-1C-aEN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yeC-Oi-KFk">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGd-Ou-Tuc">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-HY-EYU">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMq-CM-5KI">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzl-cC-zJC">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yWa-20-neo">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBH-HX-DZa">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="EQr-Kp-q4F"/>
+                                            <action selector="SichernButton:" destination="EGN-4v-MGn" eventType="touchUpInside" id="vFe-NE-PgN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="1G9-nG-BEg"/>
+                                    <constraint firstAttribute="height" constant="220" id="r1b-yp-BMh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="42d-3a-L02"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="42d-3a-L02" firstAttribute="trailing" secondItem="yeC-Oi-KFk" secondAttribute="trailing" constant="20" id="10p-pl-OMR"/>
+                            <constraint firstItem="42d-3a-L02" firstAttribute="bottom" secondItem="yeC-Oi-KFk" secondAttribute="bottom" constant="462" id="Dh7-qj-Nza"/>
+                            <constraint firstItem="42d-3a-L02" firstAttribute="top" secondItem="yeC-Oi-KFk" secondAttribute="top" id="OAp-pe-v6s"/>
+                            <constraint firstItem="yeC-Oi-KFk" firstAttribute="leading" secondItem="42d-3a-L02" secondAttribute="leading" constant="20" id="YgK-E1-ygB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dienstag" id="Die-N5-q0v"/>
+                    <connections>
+                        <outlet property="datePicker" destination="yWa-20-neo" id="LGC-Vg-mB2"/>
+                        <outlet property="taskName" destination="GMq-CM-5KI" id="cfg-r6-xPY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yc-qS-Iuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="970"/>
+        </scene>
+        <!--Mi-->
+        <scene sceneID="KgS-TD-Ily">
+            <objects>
+                <navigationController id="3bT-wO-DdU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mi" image="m.square" catalog="system" id="dkx-Zm-oAF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I8z-6f-DTF">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iEC-m9-v5Z" kind="relationship" relationship="rootViewController" id="l3U-cs-GMV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8r-ug-Jpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="274"/>
+        </scene>
+        <!--Do-->
+        <scene sceneID="TMu-eb-xOg">
+            <objects>
+                <navigationController id="JX9-To-48V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Do" image="d.square" catalog="system" id="MHV-al-ACd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gsg-QM-5fL">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RRo-4c-vjT" kind="relationship" relationship="rootViewController" id="gVC-4U-PIG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzG-gu-aqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631" y="274"/>
+        </scene>
+        <!--Fr-->
+        <scene sceneID="nzP-Qy-fgL">
+            <objects>
+                <navigationController id="dNo-bD-hYj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fr" image="f.square" catalog="system" id="qCi-Qx-teK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QTA-b2-xIX">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SR7-SP-eVv" kind="relationship" relationship="rootViewController" id="kKH-EW-qHC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOR-ae-ZH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="274"/>
+        </scene>
+        <!--Sa-->
+        <scene sceneID="VoI-0f-U5A">
+            <objects>
+                <navigationController id="g6D-QY-rcr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sa" image="s.square" catalog="system" id="3hy-no-Gpm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WcE-Pe-n65">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JaP-3U-qX3" kind="relationship" relationship="rootViewController" id="hMX-yn-hky"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9N-7S-cai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4120" y="274"/>
+        </scene>
+        <!--So-->
+        <scene sceneID="Von-UY-CZc">
+            <objects>
+                <navigationController id="Ijp-6D-u6U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="So" image="s.square" catalog="system" id="t8l-gT-oyq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JYc-Zc-WO5">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PnN-jN-dad" kind="relationship" relationship="rootViewController" id="jUw-y7-M02"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Db8-p5-aFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4869" y="274"/>
+        </scene>
+        <!--Mittwoch-->
+        <scene sceneID="ad5-L2-OGf">
+            <objects>
+                <viewController storyboardIdentifier="MiViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iEC-m9-v5Z" customClass="MiViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xr7-5z-Aw3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g0N-xk-5q4">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-50-YLZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcj-cU-TEz">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lu-Ob-6pu">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-fx-K6b">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1jH-Bh-LgI">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-TL-Ioi">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="0cT-v7-S3g"/>
+                                            <action selector="SichernButton:" destination="iEC-m9-v5Z" eventType="touchUpInside" id="VcU-7G-3nu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="8yT-Ey-ScU"/>
+                                    <constraint firstAttribute="height" constant="220" id="N0W-cV-a66"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vy8-8W-RtS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g0N-xk-5q4" firstAttribute="leading" secondItem="Vy8-8W-RtS" secondAttribute="leading" constant="20" id="JB1-ML-xkW"/>
+                            <constraint firstItem="Vy8-8W-RtS" firstAttribute="bottom" secondItem="g0N-xk-5q4" secondAttribute="bottom" constant="462" id="Qpr-Om-G2M"/>
+                            <constraint firstItem="Vy8-8W-RtS" firstAttribute="top" secondItem="g0N-xk-5q4" secondAttribute="top" id="gIt-hK-RqS"/>
+                            <constraint firstItem="Vy8-8W-RtS" firstAttribute="trailing" secondItem="g0N-xk-5q4" secondAttribute="trailing" constant="20" id="x9e-Sy-WCA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mittwoch" id="OlO-a7-bVw"/>
+                    <connections>
+                        <outlet property="datePicker" destination="1jH-Bh-LgI" id="KKu-u4-m6A"/>
+                        <outlet property="taskName" destination="9lu-Ob-6pu" id="i4h-fw-Lj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNe-Fx-rdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882" y="970"/>
+        </scene>
+        <!--Donnerstag-->
+        <scene sceneID="ma4-c6-YBO">
+            <objects>
+                <viewController storyboardIdentifier="DoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RRo-4c-vjT" customClass="DoViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGZ-Rm-luS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UcD-Py-A5V">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTv-1d-nOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-KG-yyd">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGe-6s-f9M">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-be-LoE">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="XiP-O0-XbP">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6W-9Q-itp">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="RRo-4c-vjT" eventType="touchUpInside" id="UdP-yu-qYu"/>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="w0H-U0-m89"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Eo3-LE-3tu"/>
+                                    <constraint firstAttribute="height" constant="220" id="iBc-b1-KSJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cu8-ZT-cW8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cu8-ZT-cW8" firstAttribute="top" secondItem="UcD-Py-A5V" secondAttribute="top" id="B9l-Go-JdX"/>
+                            <constraint firstItem="UcD-Py-A5V" firstAttribute="leading" secondItem="cu8-ZT-cW8" secondAttribute="leading" constant="20" id="IVh-8r-EDh"/>
+                            <constraint firstItem="cu8-ZT-cW8" firstAttribute="trailing" secondItem="UcD-Py-A5V" secondAttribute="trailing" constant="20" id="Ky6-va-9Fw"/>
+                            <constraint firstItem="cu8-ZT-cW8" firstAttribute="bottom" secondItem="UcD-Py-A5V" secondAttribute="bottom" constant="462" id="zKr-7w-G1v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donnerstag" id="yer-bJ-0gw"/>
+                    <connections>
+                        <outlet property="datePicker" destination="XiP-O0-XbP" id="agH-Ab-kEJ"/>
+                        <outlet property="taskName" destination="cGe-6s-f9M" id="vZE-bZ-5nk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUv-xe-MRU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631" y="970"/>
+        </scene>
+        <!--Freitag-->
+        <scene sceneID="6pX-hF-BJK">
+            <objects>
+                <viewController storyboardIdentifier="FrViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SR7-SP-eVv" customClass="FrViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PC4-RW-U2D">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-Up-UUt">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gee-FF-cZq">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-CK-tNU">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-wU-cHR">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-6U-D25">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mFM-51-MkP">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY9-jo-8lK">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="SR7-SP-eVv" eventType="touchUpInside" id="C0G-gl-Iz9"/>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="pWY-Ab-6FR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Dec-mf-F6i"/>
+                                    <constraint firstAttribute="width" constant="110" id="F0v-Nr-aeF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LZh-bT-dlV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LZh-bT-dlV" firstAttribute="bottom" secondItem="Y4x-Up-UUt" secondAttribute="bottom" constant="462" id="VHN-VZ-I0G"/>
+                            <constraint firstItem="Y4x-Up-UUt" firstAttribute="leading" secondItem="LZh-bT-dlV" secondAttribute="leading" constant="20" id="vVD-gL-VEn"/>
+                            <constraint firstItem="LZh-bT-dlV" firstAttribute="trailing" secondItem="Y4x-Up-UUt" secondAttribute="trailing" constant="20" id="wPv-2Y-lYW"/>
+                            <constraint firstItem="LZh-bT-dlV" firstAttribute="top" secondItem="Y4x-Up-UUt" secondAttribute="top" id="zsl-xg-mST"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Freitag" id="QwU-oz-SIL"/>
+                    <connections>
+                        <outlet property="datePicker" destination="mFM-51-MkP" id="LJz-tz-06P"/>
+                        <outlet property="taskName" destination="EDc-wU-cHR" id="k4V-fj-BNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RJ-PC-qJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="970"/>
+        </scene>
+        <!--Samstag-->
+        <scene sceneID="dhq-TS-c4G">
+            <objects>
+                <viewController storyboardIdentifier="SaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JaP-3U-qX3" customClass="SaViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bPU-eA-66z">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dik-Q5-Lt1">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-J7-Fxt">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBP-y8-68h">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OS-KX-8oy">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AI-OB-rT5">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tdV-sp-SLg">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-KB-HKL">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="JaP-3U-qX3" eventType="touchUpInside" id="Alh-In-9Lg"/>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="yhh-Dq-rby"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="HTS-XD-ClQ"/>
+                                    <constraint firstAttribute="height" constant="220" id="M9i-Qd-QUi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hWa-fG-kyC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hWa-fG-kyC" firstAttribute="trailing" secondItem="dik-Q5-Lt1" secondAttribute="trailing" constant="20" id="1Sw-Iv-WQv"/>
+                            <constraint firstItem="hWa-fG-kyC" firstAttribute="bottom" secondItem="dik-Q5-Lt1" secondAttribute="bottom" constant="462" id="Cqq-Sa-R1w"/>
+                            <constraint firstItem="dik-Q5-Lt1" firstAttribute="leading" secondItem="hWa-fG-kyC" secondAttribute="leading" constant="20" id="Dab-Z0-5X3"/>
+                            <constraint firstItem="hWa-fG-kyC" firstAttribute="top" secondItem="dik-Q5-Lt1" secondAttribute="top" id="Y21-q8-pYv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Samstag" id="b0B-Ee-xHJ"/>
+                    <connections>
+                        <outlet property="datePicker" destination="tdV-sp-SLg" id="cfm-lc-qis"/>
+                        <outlet property="taskName" destination="0OS-KX-8oy" id="GGI-Lh-cp8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5Q-hX-xah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4120" y="970"/>
+        </scene>
+        <!--Sonntag-->
+        <scene sceneID="KXx-6R-Gvt">
+            <objects>
+                <viewController storyboardIdentifier="SoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PnN-jN-dad" customClass="SoViewController" customModule="Ausgabe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hBe-3W-rVc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5JK-R5-3g9">
+                                <rect key="frame" x="20" y="90.999999999999986" width="110" height="205.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meine heutigen Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkU-33-k0s">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betrag &amp; Ort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boi-I9-5wz">
+                                        <rect key="frame" x="0.0" y="36.666666666666671" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GU7-cs-0Kd">
+                                        <rect key="frame" x="0.0" y="62" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datum des Einkaufs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-if-auX">
+                                        <rect key="frame" x="0.0" y="96" width="110" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7ai-lO-2UC">
+                                        <rect key="frame" x="0.0" y="121.33333333333334" width="110" height="50"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uue-w8-iv9">
+                                        <rect key="frame" x="0.0" y="171.33333333333331" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="SichernButton:" destination="PnN-jN-dad" eventType="touchUpInside" id="NiT-yi-3Cq"/>
+                                            <action selector="SichernButton:" destination="j3r-9b-TuU" eventType="touchUpInside" id="j1i-j8-OSp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="SE9-Ep-t2X"/>
+                                    <constraint firstAttribute="height" constant="220" id="jQK-mT-4fm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XOZ-AN-tr7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XOZ-AN-tr7" firstAttribute="top" secondItem="5JK-R5-3g9" secondAttribute="top" id="E8p-1F-zOX"/>
+                            <constraint firstItem="XOZ-AN-tr7" firstAttribute="trailing" secondItem="5JK-R5-3g9" secondAttribute="trailing" constant="20" id="bsE-D4-ULB"/>
+                            <constraint firstItem="XOZ-AN-tr7" firstAttribute="bottom" secondItem="5JK-R5-3g9" secondAttribute="bottom" constant="462" id="d3n-DB-qyX"/>
+                            <constraint firstItem="5JK-R5-3g9" firstAttribute="leading" secondItem="XOZ-AN-tr7" secondAttribute="leading" constant="20" id="dGg-Tc-yUB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sonntag" id="Zhy-9Q-eSi"/>
+                    <connections>
+                        <outlet property="datePicker" destination="7ai-lO-2UC" id="6Kf-fU-AEa"/>
+                        <outlet property="taskName" destination="GU7-cs-0Kd" id="Euv-MY-gg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lt-sa-nZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="970"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="d.square" catalog="system" width="128" height="114"/>
+        <image name="f.square" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="m.square" catalog="system" width="128" height="114"/>
+        <image name="s.square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
